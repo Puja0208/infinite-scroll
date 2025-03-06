@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AccordianItem from "./AccordianItem";
 const data = [
   {
@@ -15,10 +15,23 @@ const data = [
   },
 ];
 function Accordian() {
+  const [openIndex, setOpenIndex] = useState(0);
   return (
     <div className="w-[50%] m-auto mt-5">
       {data.map((item, i) => (
-        <AccordianItem key={i} title={item.title} body={item.body} />
+        <AccordianItem
+          open={openIndex === i}
+          key={i}
+          title={item.title}
+          handleClick={() => {
+            if (openIndex === i) {
+              setOpenIndex(null);
+            } else {
+              setOpenIndex(i);
+            }
+          }}
+          body={item.body}
+        />
       ))}
     </div>
   );
