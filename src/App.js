@@ -10,6 +10,7 @@ import Accordian from "./components/Accordian";
 import Comments from "./components/comments/Comments";
 import ImageSlider from "./components/imageSlider/ImageSlider";
 import Pagination from "./components/pagination/Pagination";
+import LiveChat from "./components/live-chat/LiveChat";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
           <a href="/comments">NestedComments</a>
           <a href="/login">Login</a>
           <a href="/slider">Image slider</a>
-          <a href="/pagination">Pagination</a>
+
+          <a href="/live-chat">Livechat</a>
         </nav>
       </div>
 
@@ -39,6 +41,7 @@ function App() {
             <Route path="/accordian" element={<Accordian />} />
             <Route path="/slider" element={<ImageSlider />} />
             <Route path="/pagination" element={<Pagination />} />
+            <Route path="/live-chat" element={<LiveChat />} />
           </Route>
         </Routes>
       </BrowserRouter>
