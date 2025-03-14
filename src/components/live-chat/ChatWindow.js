@@ -183,6 +183,8 @@ function ChatWindow() {
 
   var finalName = "";
 
+  const CHAT_MSG_LIMIT = 100;
+
   function generateRandomNames() {
     var finalName = nameList[Math.floor(Math.random() * nameList.length)];
     return finalName;
@@ -198,7 +200,11 @@ function ChatWindow() {
         message: "This is a chat video live",
       },
     ];
-    setMessage((mess) => [...data, ...mess]);
+    setMessage((mess) => {
+      let newList = [...data, ...mess];
+      newList = newList.slice(0, CHAT_MSG_LIMIT);
+      return newList;
+    });
   };
   useEffect(() => {
     const s = setInterval(fetchData, 2000);
