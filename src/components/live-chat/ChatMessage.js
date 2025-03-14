@@ -3,10 +3,10 @@ import React from "react";
 function ChatMessage({ name, photo, message }) {
   return (
     <div className="flex p-2">
-      <img src={photo} alt={name} />
+      <img className="h-8 w-8 m-2 rounded-full" src={photo} alt={name} />
       <p className="p-2">
         <span className="font-bold">{name}</span>
-        <span className="m-2">{message}</span>
+        <span className="">{message}</span>
       </p>
     </div>
   );
