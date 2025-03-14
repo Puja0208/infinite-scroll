@@ -16,11 +16,60 @@ const data = [
       "https://yt4.ggpht.com/FCRRKJvBS6eZZoi-1lr7W81zXtP2kYgUrB-GfKz46JbQjADlccqcGdk3NRBuom4lD4egbjmVTA=s32-c-k-c0x00ffffff-no-rj",
     message: "This is a chat video live",
   },
+  {
+    id: 3,
+    name: "Sam",
+    photo:
+      "https://yt4.ggpht.com/FCRRKJvBS6eZZoi-1lr7W81zXtP2kYgUrB-GfKz46JbQjADlccqcGdk3NRBuom4lD4egbjmVTA=s32-c-k-c0x00ffffff-no-rj",
+    message: "This is a chat video live",
+  },
+  {
+    id: 4,
+    name: "Sam",
+    photo:
+      "https://yt4.ggpht.com/FCRRKJvBS6eZZoi-1lr7W81zXtP2kYgUrB-GfKz46JbQjADlccqcGdk3NRBuom4lD4egbjmVTA=s32-c-k-c0x00ffffff-no-rj",
+    message: "This is a chat video live",
+  },
+  {
+    id: 5,
+    name: "Sam",
+    photo:
+      "https://yt4.ggpht.com/FCRRKJvBS6eZZoi-1lr7W81zXtP2kYgUrB-GfKz46JbQjADlccqcGdk3NRBuom4lD4egbjmVTA=s32-c-k-c0x00ffffff-no-rj",
+    message: "This is a chat video live",
+  },
+  {
+    id: 6,
+    name: "Sam",
+    photo:
+      "https://yt4.ggpht.com/FCRRKJvBS6eZZoi-1lr7W81zXtP2kYgUrB-GfKz46JbQjADlccqcGdk3NRBuom4lD4egbjmVTA=s32-c-k-c0x00ffffff-no-rj",
+    message: "This is a chat video live",
+  },
+  {
+    id: 7,
+    name: "Sam",
+    photo:
+      "https://yt4.ggpht.com/FCRRKJvBS6eZZoi-1lr7W81zXtP2kYgUrB-GfKz46JbQjADlccqcGdk3NRBuom4lD4egbjmVTA=s32-c-k-c0x00ffffff-no-rj",
+    message: "This is a chat video live",
+  },
+  {
+    id: 8,
+    name: "Sam",
+    photo:
+      "https://yt4.ggpht.com/FCRRKJvBS6eZZoi-1lr7W81zXtP2kYgUrB-GfKz46JbQjADlccqcGdk3NRBuom4lD4egbjmVTA=s32-c-k-c0x00ffffff-no-rj",
+    message: "This is a chat video live",
+  },
+  {
+    id: 9,
+    name: "Sam",
+    photo:
+      "https://yt4.ggpht.com/FCRRKJvBS6eZZoi-1lr7W81zXtP2kYgUrB-GfKz46JbQjADlccqcGdk3NRBuom4lD4egbjmVTA=s32-c-k-c0x00ffffff-no-rj",
+    message: "This is a chat video live",
+  },
 ];
 function ChatWindow() {
   const [message, setMessage] = useState(data);
   return (
-    <div className="h-400 w-full border border-black">
+    <div className="flex flex-wrap h-[400px] w-full border border-black overflow-y-scroll">
       {message.map((mes) => {
         return (
           <ChatMessage
