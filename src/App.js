@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Accordian from "./components/Accordian";
 import Comments from "./components/comments/Comments";
+import ImageSlider from "./components/imageSlider/ImageSlider";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <a href="/team">Team </a>
           <a href="/comments">NestedComments</a>
           <a href="/login">Login</a>
+          <a href="/slider">Image slider</a>
         </nav>
       </div>
 
@@ -33,6 +35,7 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/login" element={<Login />} />
             <Route path="/accordian" element={<Accordian />} />
+            <Route path="/slider" element={<ImageSlider />} />
           </Route>
         </Routes>
       </BrowserRouter>
