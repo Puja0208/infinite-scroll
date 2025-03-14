@@ -9,13 +9,14 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Accordian from "./components/Accordian";
 import Comments from "./components/comments/Comments";
 import ImageSlider from "./components/imageSlider/ImageSlider";
+import Pagination from "./components/pagination/Pagination";
 
 function App() {
   return (
     <div>
       <div className="text-2xl font-bold py-5 bg-black text-white text-center flex">
         Hello world
-        <nav className="px-20 m-2 w-800 justify-between text-lg ">
+        <nav className="px-20 m-2 w-1000 justify-between text-lg ">
           <a href="/">Home </a>
           <a href="/accordian">Accordian </a>
           <a href="/about">About </a>
@@ -23,6 +24,7 @@ function App() {
           <a href="/comments">NestedComments</a>
           <a href="/login">Login</a>
           <a href="/slider">Image slider</a>
+          <a href="/pagination">Pagination</a>
         </nav>
       </div>
 
@@ -36,6 +38,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/accordian" element={<Accordian />} />
             <Route path="/slider" element={<ImageSlider />} />
+            <Route path="/pagination" element={<Pagination />} />
           </Route>
         </Routes>
       </BrowserRouter>
