@@ -11,6 +11,7 @@ import Comments from "./components/comments/Comments";
 import ImageSlider from "./components/imageSlider/ImageSlider";
 import Pagination from "./components/pagination/Pagination";
 import LiveChat from "./components/live-chat/LiveChat";
+import SearchUI from "./components/search-ui/SearchUI";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <a href="/slider">Image slider</a>
 
           <a href="/live-chat">Livechat</a>
+          <a href="/search-ui">SearchUI</a>
         </nav>
       </div>
 
@@ -42,6 +44,7 @@ function App() {
             <Route path="/slider" element={<ImageSlider />} />
             <Route path="/pagination" element={<Pagination />} />
             <Route path="/live-chat" element={<LiveChat />} />
+            <Route path="/search-ui" element={<SearchUI />} />
           </Route>
         </Routes>
       </BrowserRouter>
