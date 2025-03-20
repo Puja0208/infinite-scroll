@@ -31,7 +31,9 @@ function SearchUI() {
       {searchResults.length && isResultVisible && (
         <ul className="p-2 border border-black w-96">
           {searchResults.map((item, i) => (
-            <li key={i}>{item}</li>
+            <li className="hover:bg-gray-200 cursor-pointer" key={i}>
+              {item}
+            </li>
           ))}
         </ul>
       )}
