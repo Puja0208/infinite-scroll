@@ -5,6 +5,7 @@ function SearchUI() {
   const [searchResults, setSearchResults] = useState([]);
 
   const [isResultVisible, setIsResultVisible] = useState(false);
+  const [cache, setCache] = useState({});
 
   useEffect(() => {
     let timerId;
@@ -18,12 +19,19 @@ function SearchUI() {
   }, [searchText]);
 
   const fetchData = async () => {
-    const data = await fetch(
-      `https://www.google.com/complete/search?client=firefox&q=${searchText}`
-    );
-    const json = await data.json();
-
-    setSearchResults(json[1]);
+    if (cache[searchText]) {
+      setSearchResults(cache[searchText]);
+    } else {
+      const data = await fetch(
+        `https://www.google.com/complete/search?client=firefox&q=${searchText}`
+      );
+      const json = await data.json();
+      cache[searchText] = json[1];
+      setCache((cache) => {
+        return { ...cache, searchText: json[1] };
+      });
+      setSearchResults(json[1]);
+    }
   };
   return (
     <div className="m-10">
