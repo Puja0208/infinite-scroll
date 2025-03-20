@@ -7,7 +7,14 @@ function SearchUI() {
   const [isResultVisible, setIsResultVisible] = useState(false);
 
   useEffect(() => {
-    fetchData();
+    let timerId;
+    timerId = setTimeout(() => {
+      fetchData();
+    }, 200);
+
+    return () => {
+      clearTimeout(timerId);
+    };
   }, [searchText]);
 
   const fetchData = async () => {
@@ -29,9 +36,9 @@ function SearchUI() {
         onBlur={() => setIsResultVisible(false)}
       />
       {searchResults.length && isResultVisible && (
-        <ul className="p-2 border border-black w-96">
+        <ul className="p-2 border border-black w-96 shadow-lg">
           {searchResults.map((item, i) => (
-            <li className="hover:bg-gray-200 cursor-pointer" key={i}>
+            <li className="hover:bg-gray-200 cursor-pointer shadow-md" key={i}>
               {item}
             </li>
           ))}
